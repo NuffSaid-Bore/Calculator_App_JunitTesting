@@ -5,18 +5,33 @@ import org.junit.Test;
 public class CalculatorTest {
     
     // Arrange
-            // Where setup is made, creating objects, mockup jacks
+        // Where setup is made, creating objects, mockup jacks
+        int f = -1;
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int e = 5;
 
-        // Act
-            // method being tested( It's ususally one line)
+    // Act
+        // method being tested( It's ususally one line)
+        int one_plus_two = Calculator.add(a + b);
+        int negative_one_plus_negative_one = Calculator.add(f + f);
+        int one_to_five_add = Calculator.add( a + b + c + d + e);
 
-        // Assert
-            // Where you have your asserte.g Assert.fail(), Assert.assertNotNull(), Assert.equals()
+    // Assert
+        // Where you have your asserte.g Assert.fail(), Assert.assertNotNull(), Assert.equals()
+
     @Test
     public void addTest(){
-        assertEquals(3, Calculator.add(1,2));
-        assertEquals(-2, Calculator.add(-1,-1));
+        assertEquals(3, one_plus_two);
+        assertEquals(-2, negative_one_plus_negative_one);
+
+        // Another way of testing for an alternative way using List
+        // assertEquals(15, Calculator.add(Arrays.asList(1,2,3,4,5)));
         
+        // using the modified method
+        assertEquals(15, one_to_five_add);
     }
 
 }
