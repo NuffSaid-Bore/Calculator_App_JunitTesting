@@ -15,9 +15,11 @@ public class CalculatorTest {
 
     // Act
         // method being tested( It's ususally one line)
-        int one_plus_two = Calculator.add(a + b);
-        int negative_one_plus_negative_one = Calculator.add(f + f);
-        int one_to_five_add = Calculator.add( a + b + c + d + e);
+        int one_plus_two = Calculator.add(a , b);
+        int negative_one_plus_negative_one = Calculator.add(f , f);
+        int one_to_five_add = Calculator.add(a , b , c , d , e);
+        int multiply_one_by_three = Calculator.multiply(a , c);
+        int multiply_neg_one_three = Calculator.multiply(f , c);
 
     // Assert
         // Where you have your asserte.g Assert.fail(), Assert.assertNotNull(), Assert.equals()
@@ -32,6 +34,13 @@ public class CalculatorTest {
         
         // using the modified method
         assertEquals(15, one_to_five_add);
+    }
+
+    @Test
+    public void multiplyTest(){
+        assertEquals(3, multiply_one_by_three);
+        assertEquals(-3, multiply_neg_one_three);
+
     }
 
 }

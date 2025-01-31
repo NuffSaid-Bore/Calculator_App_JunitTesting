@@ -25,4 +25,11 @@ public class Calculator {
         }
         return sum;
     }
+
+    public static int multiply(int a, int b){
+        int results = 0;
+
+        results = a * b;
+        return results;
+    }
 }
