@@ -20,6 +20,7 @@ public class CalculatorTest {
         int one_to_five_add = Calculator.add(a , b , c , d , e);
         int multiply_one_by_three = Calculator.multiply(a , c);
         int multiply_neg_one_three = Calculator.multiply(f , c);
+        int multiply_one_to_five = Calculator.multiply(a, b, c, d, e);
 
     // Assert
         // Where you have your asserte.g Assert.fail(), Assert.assertNotNull(), Assert.equals()
@@ -40,6 +41,12 @@ public class CalculatorTest {
     public void multiplyTest(){
         assertEquals(3, multiply_one_by_three);
         assertEquals(-3, multiply_neg_one_three);
+
+        // Another way of testing for an alternative way using List
+        // assertEquals(120, Calculator.add(Arrays.asList(1,2,3,4,5)));
+
+        // Using the Modified Method
+        assertEquals(120, multiply_one_to_five);
 
     }
 

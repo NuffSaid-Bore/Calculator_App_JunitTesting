@@ -32,4 +32,22 @@ public class Calculator {
         results = a * b;
         return results;
     }
+
+    // Alternative way of handling multiple numbers
+    // public int multiply(List<Integer> numbers) {
+    //     int result = 1;
+    //     for (int num : numbers) {
+    //         result *= num;
+    //     }
+    //     return result;
+    // }
+
+    // Modified multiply to handle multiple numbers
+    public static int multiply(int... numbers) {
+        int results = 1;
+        for (int number : numbers) {
+            results *= number;
+        }
+        return results;
+    }
 }
